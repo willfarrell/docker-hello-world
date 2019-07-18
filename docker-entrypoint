@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -e
+
+echo '<html><head><title>'$(hostname)'</title></head><body><h1>Hello from '$(hostname)'</h1></body></html' > index.html
+
+python -m SimpleHTTPServer ${PORT:-80}
